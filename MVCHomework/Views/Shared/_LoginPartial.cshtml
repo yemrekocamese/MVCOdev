@@ -1,0 +1,33 @@
+﻿<ul class="navbar-nav my-2 mb-lg-0">
+
+    @if (!string.IsNullOrWhiteSpace(Context.Session.GetString("User")))
+    {
+        <li class="nav-item acitve">
+            <p style="color:white"> @Context.Session.GetString("User")</p>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/Auth/Logout">Çıkış Yap</a>
+        </li>
+
+    }
+    else
+    {
+        <li class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-1 border-1" style="width: 10rem;">
+                        <div class="card-body text-center p-2 bg-dark">
+                            <a href="/Auth/Login" class="btn btn-primary btn-sm ">Giriş Yap</a>
+                            <a href="/Auth/Register" class="btn btn-success btn-sm">Kayıt Ol</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+
+
+    }
+
+</ul>

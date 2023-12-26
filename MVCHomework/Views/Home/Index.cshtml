@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Product>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src=@item.ImageUrl alt="Product image">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">
+                            Price: @item.Price $ <br/>
+                        </p>
+                        <a href="home/details/@item.Id" class="btn btn-primary">Tura Git</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
